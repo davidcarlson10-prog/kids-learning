@@ -63,9 +63,17 @@ function App() {
             <div className="relative z-10 min-h-screen flex flex-col">
                 {/* Header */}
                 <header className="bg-white shadow-md p-4 flex justify-between items-center sticky top-0 z-10">
-                    <h1 className="text-2xl md:text-3xl font-bold text-blue-600 font-comic tracking-wide">
-                        Try and catch the stars!
-                    </h1>
+                    <div className="flex items-center gap-4">
+                        <h1 className="text-2xl md:text-3xl font-bold text-blue-600 font-comic tracking-wide">
+                            Try and catch the stars!
+                        </h1>
+                        <button
+                            onClick={resetGame}
+                            className="bg-blue-100 hover:bg-blue-200 text-blue-600 text-sm font-bold px-3 py-1 rounded-full transition-colors border border-blue-200"
+                        >
+                            New Game
+                        </button>
+                    </div>
 
                     <div className="flex items-center gap-2 bg-yellow-100 px-4 py-2 rounded-full border-2 border-yellow-300 shadow-sm">
                         <Star className="text-yellow-500 fill-yellow-500 animate-pulse" size={28} />

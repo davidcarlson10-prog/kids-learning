@@ -91,6 +91,10 @@ export function useGameState() {
         }));
         setProgress(newProgress);
         setCurrentView('MAP');
+
+        // Reset user
+        setUserName('');
+        localStorage.removeItem('kids-math-username');
     };
 
     return {
