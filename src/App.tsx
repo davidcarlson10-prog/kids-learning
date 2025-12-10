@@ -62,24 +62,27 @@ function App() {
             {/* Content Container - Needs distinct z-index to sit on top */}
             <div className="relative z-10 min-h-screen flex flex-col">
                 {/* Header */}
-                <header className="bg-white shadow-md p-4 flex justify-between items-center sticky top-0 z-10">
-                    <div className="flex items-center gap-4">
-                        <h1 className="text-2xl md:text-3xl font-bold text-blue-600 font-comic tracking-wide">
+                <header className="bg-white shadow-md p-4 relative flex justify-end items-center sticky top-0 z-10 h-20">
+                    <div className="absolute left-0 right-0 top-0 bottom-0 flex justify-center items-center pointer-events-none">
+                        <h1 className="text-4xl md:text-5xl font-bold text-blue-500 font-playful tracking-wide drop-shadow-md pointer-events-auto">
                             Try and catch the stars!
                         </h1>
+                    </div>
+
+                    <div className="flex items-center gap-4 z-20">
                         <button
                             onClick={resetGame}
-                            className="bg-blue-100 hover:bg-blue-200 text-blue-600 text-sm font-bold px-3 py-1 rounded-full transition-colors border border-blue-200"
+                            className="bg-blue-100 hover:bg-blue-200 text-blue-600 text-sm font-bold px-4 py-2 rounded-full transition-colors border border-blue-200"
                         >
                             New Game
                         </button>
-                    </div>
 
-                    <div className="flex items-center gap-2 bg-yellow-100 px-4 py-2 rounded-full border-2 border-yellow-300 shadow-sm">
-                        <Star className="text-yellow-500 fill-yellow-500 animate-pulse" size={28} />
-                        <span className="text-2xl font-bold text-yellow-700">
-                            {totalStars} / {maxStars}
-                        </span>
+                        <div className="flex items-center gap-2 bg-yellow-100 px-4 py-2 rounded-full border-2 border-yellow-300 shadow-sm">
+                            <Star className="text-yellow-500 fill-yellow-500 animate-pulse" size={28} />
+                            <span className="text-2xl font-bold text-yellow-700">
+                                {totalStars} / {maxStars}
+                            </span>
+                        </div>
                     </div>
                 </header>
 
