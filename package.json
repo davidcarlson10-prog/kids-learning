@@ -2,7 +2,6 @@
     "name": "kids-learning",
     "private": true,
     "version": "0.0.0",
-    "homepage": "https://davidcarlson10-prog.github.io/kids-learning/",
     "type": "module",
     "scripts": {
         "dev": "vite",
